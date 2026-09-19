@@ -2,15 +2,41 @@
 
 Playground local pra decidir a identidade da marca em tempo real: nome, logo com iniciais, cores, tipografia, bordas, padrões, estilo de site, voz/escrita, missão, visão, valores. Tudo salva sozinho a cada mudança.
 
+## Faz parte de um artigo
+
+Este repositório acompanha um artigo publicado no **X** sobre montar uma identidade de marca
+inteira e uma logo 3D usando só IA.
+
+**Artigo:** _link em breve_
+
+| Parte do artigo | Onde está aqui |
+|---|---|
+| O playground de marca | este repositório |
+| A skill usada na logo 3D | [`skills/blender-logo-motion/`](skills/blender-logo-motion/) |
+
+### A skill do Blender
+
+`skills/blender-logo-motion/` é uma skill de agente para produzir logo 3D, animação e
+exportações no Blender a partir de um vetor. É agnóstica de marca, paleta e sistema: não
+tem nada da minha identidade dentro dela.
+
+Para usar no Claude Code, copie para as skills do usuário ou do projeto:
+
+```bash
+cp -R skills/blender-logo-motion ~/.claude/skills/
+```
+
+Ela conta com o Blender aberto e o add-on do Blender MCP conectado.
+
 ## Rodar
 
 ```bash
-node brand-playground/server.mjs        # abre em http://localhost:4747
+node server.mjs        # abre em http://localhost:4747
 ```
 
-Com o servidor rodando, o estado é gravado em `brand-playground/brand.json` (versionável no git) e num backup diário em `brand-playground/backups/`.
+Com o servidor rodando, o estado é gravado em `brand.json` e num backup diário em `backups/`. Os dois ficam fora do git.
 
-Alternativa sem servidor: abrir `brand-playground/index.html` direto no navegador. Salva no `localStorage` do navegador (não em arquivo).
+Alternativa sem servidor: abrir `index.html` direto no navegador. Salva no `localStorage` do navegador (não em arquivo).
 
 Fontes vêm do Google Fonts: precisa de internet pra ver as fontes reais.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender Logo Motion"
+  short_description: "Logos 3D, animações e exportações no Blender"
+  default_prompt: "Use $blender-logo-motion para transformar a logo anexada em uma versão 3D e animação no Blender, seguindo meu briefing."
