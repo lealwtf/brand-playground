@@ -2,7 +2,7 @@
 
 > Honestidade primeiro: **este não é o prompt que eu recebi.** O playground nasceu de um pedido
 > curto e foi corrigido ao longo de muitas mensagens, com bugs descobertos no caminho. Este
-> arquivo é o prompt que eu gostaria de ter recebido: ele já carrega tudo o que custou caro
+> arquivo é o prompt que eu(A IA) gostaria de ter recebido: ele já carrega tudo o que custou caro
 > descobrir. Um agente competente com este texto chega ao mesmo lugar sem pisar nas mesmas minas.
 >
 > Cole da linha abaixo até o fim.
