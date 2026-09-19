@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR" data-tool-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brand Playground</title>
+<link rel="icon" id="favicon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="tb-left">
+    <div id="tb-logo" class="tb-logo"></div>
+    <div class="tb-title"><strong id="tb-name">—</strong><span id="tb-status" class="status">carregando…</span></div>
+  </div>
+  <nav class="tabs" id="tabs"></nav>
+  <div class="tb-right">
+    <button class="ib" id="btn-undo" title="Desfazer (⌘Z)">↶</button>
+    <button class="ib" id="btn-redo" title="Refazer (⇧⌘Z)">↷</button>
+    <button class="ib" id="btn-random" title="Me surpreenda (R)">🎲</button>
+    <button class="ib" id="btn-theme" title="Tema da ferramenta">◐</button>
+    <div class="menu">
+      <button class="ib" id="btn-menu" title="Exportar / importar">⋯</button>
+      <div class="menu-list" id="menu-list" hidden>
+        <button data-act="export-json">Baixar JSON (backup completo)</button>
+        <button data-act="import-json">Importar JSON…</button>
+        <button data-act="export-md">Baixar brand.md</button>
+        <button data-act="copy-md">Copiar brand.md</button>
+        <button data-act="export-css">Baixar tokens.css</button>
+        <hr>
+        <button data-act="print">Imprimir brand sheet (PDF)</button>
+        <hr>
+        <button data-act="reset" class="danger">Resetar tudo…</button>
+      </div>
+    </div>
+    <button class="ib" id="btn-help" title="Atalhos (?)">?</button>
+  </div>
+</header>
+
+<main class="main">
+  <aside class="sidebar">
+    <div class="sb-top">
+      <input id="search" type="search" placeholder="Buscar ajuste… (raio, fonte, tom, valores)" autocomplete="off">
+      <div class="progress" title="Quantas decisões você já tomou">
+        <div class="bar"><i id="prog-bar"></i></div>
+        <span id="prog-txt">0% decidido</span>
+      </div>
+    </div>
+    <div id="controls" class="controls"></div>
+  </aside>
+
+  <section class="preview">
+    <div class="pv-toolbar">
+      <div class="seg" id="device-seg">
+        <button data-d="desktop" class="on">Desktop</button>
+        <button data-d="tablet">Tablet</button>
+        <button data-d="mobile">Celular</button>
+      </div>
+      <div class="seg" id="theme-seg">
+        <button data-t="light" class="on">☀️ Claro</button>
+        <button data-t="dark">🌙 Escuro</button>
+      </div>
+      <label class="zoom">Zoom <input id="zoom" type="range" min="50" max="100" value="100"><span id="zoom-txt">100%</span></label>
+      <span class="pv-hint" id="pv-hint"></span>
+    </div>
+    <div class="pv-scroll" id="pv-scroll">
+      <div class="frame" id="frame"><div class="b-root" id="b-root"></div></div>
+    </div>
+  </section>
+</main>
+
+<div id="modal" class="modal" hidden>
+  <div class="modal-box">
+    <button class="modal-x" id="modal-x" title="Fechar (Esc)">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<div id="toast" class="toast" hidden></div>
+<div id="print-area"></div>
+<input type="file" id="file-import" accept="application/json,.json" hidden>
+
+<script src="data.js"></script>
+<script src="logo.js"></script>
+<script src="render.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

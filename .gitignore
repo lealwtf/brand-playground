@@ -1,0 +1,13 @@
+# Dados locais de quem usa. Nada aqui vai para o repositorio.
+pessoal/
+brand.json
+backups/
+snapshots/
+exports/
+
+# Saidas geradas
+brandbook.html
+*-brandbook.pdf
+
+# Sistema
+.DS_Store
